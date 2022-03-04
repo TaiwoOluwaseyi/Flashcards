@@ -10,6 +10,78 @@ body {
   background-color: whitesmoke;
 }
 
+.container {
+  margin: auto;
+  width: 1280px;
+}
+
+header {
+  background-color: #fff;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background: #fff;
+  min-height: 70px;
+}
+
+#create-card {
+  display: none;
+  width: 370px;
+  margin: auto;
+  padding: 20px;
+  margin-top: 10px;
+  background: whitesmoke;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9);
+}
+
+#create-card h2 {
+  color: black;
+  text-align: center;
+}
+
+#create-card textarea {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  outline: none;
+  font-family: inherit;
+}
+
+#create-card button {
+  width: fit-content;
+}
+
+#flashcards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: auto;
+  margin-top: 10px;
+  padding: 0px 10px;
+}
+
+.flashcard{
+  width: 370px;
+  height: 200px;
+  word-wrap: break-word;
+  margin: 10px; 
+  background:#fff;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9);
+}
+
+.flashcard h2{font-size: 1rem;}
+
+#header button {
+  font-family: inherit;
+  border: 1px solid red;
+}
+
 button {
   padding: 8px;
   outline: none;
@@ -17,4 +89,37 @@ button {
   border-radius: 5px;
   border: 1px solid lightgray;
   background: whitesmoke;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+/* media screen */
+@media(max-width:1280px){
+  .container{width: 100%;}
+}
+
+@media(max-width:768px){
+  .flashcard{margin: auto;}
+
+  .flashcard{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+@media(max-width:480px){
+  #header{
+    padding: 20px;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #create_card{width: 95%;}
+
+  .flashcard{width: 100%;}
+
 }
