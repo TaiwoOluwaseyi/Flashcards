@@ -1,21 +1,23 @@
-var contentArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
+var contentArray = localStorage.getItem("items")
+  ? JSON.parse(localStorage.getItem("items"))
+  : [];
 
-document.getElementById("save_card").addEventListener("click", () => {
+document.getElementById("save-card").addEventListener("click", () => {
   addFlashcard();
 });
 
-document.getElementById("delete_cards").addEventListener("click", () => {
+document.getElementById("delete").addEventListener("click", () => {
   localStorage.clear();
-  flashcards.innerHTML = '';
+  flashcards.innerHTML = "";
   contentArray = [];
 });
 
-document.getElementById("show_card_box").addEventListener("click", () => {
-  document.getElementById("create_card").style.display = "block";
+document.getElementById("show").addEventListener("click", () => {
+  document.getElementById("create-card").style.display = "block";
 });
 
-document.getElementById("close_card_box").addEventListener("click", () => {
-  document.getElementById("create_card").style.display = "none";
+document.getElementById("close-card-box").addEventListener("click", () => {
+  document.getElementById("create-card").style.display = "none";
 });
 
 flashcardMaker = (text) => {
@@ -61,4 +63,4 @@ addFlashcard = () => {
   flashcardMaker(contentArray[contentArray.length - 1]);
   question.value = "";
   answer.value = "";
-}
+};
